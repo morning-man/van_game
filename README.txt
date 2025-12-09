@@ -1,0 +1,1 @@
+This project is a fun little sidescroller game where players need to dodge incoming traffic pylons. It was made to understand the basics of Pygame. Have fun with it!
