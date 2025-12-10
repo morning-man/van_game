@@ -51,7 +51,7 @@ while running:
                 current_lane -= 1
                 Y = Y_positions[current_lane]
 
-    scroll -= 5
+    scroll -= 10
     if abs(scroll) > bg_width:
         scroll = 0
     for i in range(tiles):
@@ -61,7 +61,7 @@ while running:
     score_text = score_font.render(f"Score: {math.ceil(score)}", True, (255, 255, 255))
     screen.blit(score_text, (10, 10))
 
-    spawn_timer -= 1 / 60
+    spawn_timer -= 1 / 30
     if spawn_timer <= 0:
         lane_idx = random.randrange(len(lane_centers))
         center = lane_centers[lane_idx]
@@ -72,7 +72,7 @@ while running:
     
 
     for p in pylons:
-        p[0] -= 5
+        p[0] -= 10
         screen.blit(pylon, (p[0], p[1]))
 
         HB_W, HB_H = 60, 90
@@ -94,3 +94,4 @@ while running:
     clock.tick(60)
 
 pygame.quit()
+
